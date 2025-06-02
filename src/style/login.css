@@ -1,0 +1,394 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, var(--cor02), #143852);
+}
+
+main {
+    display: flex;
+    width: 60%;
+    height: 50%;
+    border-radius: 25px 23px 23px 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.549);
+    background-color: white;
+}
+
+/* Login */
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+}
+
+.login img:nth-child(1) {
+    display: block;
+    margin: 0px auto 20px;
+    width: 40%;
+}
+
+.login p {
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 70%;
+    font-size: 1.1em;
+}
+
+/* Fundo / imagem */
+.fund {
+    width: 50%;
+    height: 500px;
+    display: block;
+    background: rgb(0, 26, 0) url('../img/biblioteca.jpg') center center no-repeat;
+    background-size: cover;
+    border-radius: 24px 0px 0px 24px;
+}
+
+/* Formulario / input */
+
+.coolinput {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: static;
+    min-width: 70%;
+    margin: 10px auto;
+}
+
+.coolinput:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.coolinput label.text {
+    font-size: 1em;
+    font-weight: 700;
+    position: relative;
+    top: 0.5rem;
+    margin: auto;
+    padding: 0 3px;
+    background: #ffffff;
+    width: fit-content;
+}
+
+.coolinput input[type=text].input {
+    margin: auto;
+    padding: 11px 10px;
+    font-size: 1em;
+    border: 2px #000000 solid;
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+.coolinput input[type=text].input:focus {
+    outline: none;
+}
+
+.group {
+    display: flex;
+    line-height: 30px;
+    align-items: center;
+    position: relative;
+    max-width: 70%;
+    margin: auto;
+}
+
+.input {
+    width: 100%;
+    height: 45px;
+    line-height: 30px;
+    padding: 0 5rem;
+    padding-left: 3rem;
+    border: 2px solid rgba(0, 0, 0, 0.374);
+    border-radius: 10px;
+    outline: none;
+    background-color: #f8fafc;
+    color: #0d0c22;
+    transition: .5s ease;
+}
+
+.input::placeholder {
+    color: #94a3b8;
+}
+
+.input:focus,
+.input:hover {
+    outline: none;
+    border-color: var(--cor02);
+    background-color: #fff;
+    box-shadow: 0 0 0 5px rgb(129 140 248 / 30%);
+}
+
+/*------ config ------*/
+.container {
+    --color: var(--preto-padrao);
+    --size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 1rem;
+    fill: none;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    font-size: var(--size);
+    user-select: none;
+    fill: var(--color);
+}
+
+.container .lock-open {
+    position: absolute;
+
+}
+
+.container .lock {
+    position: absolute;
+    display: none;
+
+}
+
+/* ------ check on ------ */
+.container input:checked~.lock-open {
+    display: none;
+}
+
+.container input:checked~.lock {
+    display: block;
+}
+
+/* ------ esconde o ico padrão ------ */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
+
+/* Botões */
+#entrar {
+    display: block;
+    margin: 0px auto 10px;
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+h1{
+    text-align: center;
+}
+#entrar:focus,
+#entrar:hover {
+    color: #000000;
+}
+
+#entrar:focus:after,
+#entrar:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+#entrar:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--cor-destaque);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+form p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form strong {
+    color: var(--cor-destaque);
+    cursor: pointer;
+}
+
+form small {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.504);
+}
+
+/* Card */
+
+.card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.178);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-content {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* Conteudo do Card */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    position: relative;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #00bfff;
+}
+
+.title::before {
+    width: 18px;
+    height: 18px;
+}
+
+.title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+.title::before,
+.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #00bfff;
+}
+
+.message,
+.signin {
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.signin {
+    text-align: center;
+}
+
+.signin a:hover {
+    text-decoration: underline royalblue;
+}
+
+.signin a {
+    color: #00bfff;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 20px 05px 05px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.form label .input+span {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown+span {
+    top: 12.5px;
+    font-size: 0.9em;
+}
+
+.form label .input:focus+span,
+.form label .input:valid+span {
+    color: #00bfff;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.input {
+    font-size: medium;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+    background-color: #00bfff;
+}
+
+.submit:hover {
+    background-color: #00bfff96;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,52 @@
+.container{
+    margin: 30px auto;
+}
+#jobs{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.block{
+    padding: 20px;
+    min-width: 15%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.422);
+    font-weight: bold;
+    height: 10vh;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.block:hover{
+    scale: 1.05;
+}
+.b1{border-right: 10px solid rgb(205, 164, 0);}
+.b2{border-right: 10px solid green;}
+.b3{border-right: 10px solid rgb(0, 128, 128);}
+.b4{border-right: 10px solid rgb(100, 0, 128);}
+.b5{border-right: 10px solid rgb(128, 0, 21);}
+
+.b1:hover{color: rgb(205, 164, 0);}
+.b2:hover{color: green;}
+.b3:hover{color: rgb(0, 128, 128);}
+.b4:hover{color: rgb(100, 0, 128);}
+.b5:hover{color: rgb(128, 0, 21);}
+.cp{
+    background-color: chocolate;
+    height: 10vh;
+    width: 20px;
+}
+.text{
+    width: calc(100%-20px);
+}
+.block p{
+    padding: 0px;
+    margin: 0px;;
+}
+.block::before{
+    content: '';
+    background-color: chartreuse;
+    width: 20px;
+    height: 10vh;
+}

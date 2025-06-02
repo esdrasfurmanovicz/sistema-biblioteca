@@ -1,0 +1,88 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.icone {
+    --color: var(--preto-padrao);
+    --size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 1rem;
+    fill: none;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    font-size: var(--size);
+    user-select: none;
+    fill: var(--color);
+}
+
+.icone .lock-open {
+    position: absolute;
+
+}
+
+.icone .lock {
+    position: absolute;
+    display: none;
+
+}
+
+/* ------ check on ------ */
+.icone input:checked~.lock-open {
+    display: none;
+}
+
+.icone input:checked~.lock {
+    display: block;
+}
+
+/* ------ esconde o ico padrão ------ */
+.icone input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
+
+.senha{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.group {
+    display: flex;
+    line-height: 30px;
+    align-items: center;
+    position: relative;
+    margin: auto;
+}
+
+
+.input {
+    line-height: 30px;
+    padding: 0 5rem;
+    padding-left: 3rem;
+    background-color: #f8fafc;
+    color: #0d0c22;
+    transition: .5s ease;
+}
+
+.input::placeholder {
+    color: #94a3b8;
+}
+

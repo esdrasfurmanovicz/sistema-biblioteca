@@ -1,0 +1,64 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 50px 0px;
+    padding: 20px;
+    max-width: 60%;
+}
+h2{
+    margin: 30px 0px;
+    font-weight: bold;
+}
+form .enviar{
+    margin-top: 20px;
+    padding: 5px;
+    color: rgb(15, 209, 15);
+    background-color: white;
+    border: 3px solid rgb(15, 209, 15);
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+.enviar:hover{
+    background: rgb(15, 209, 15);
+    color: black;
+    transform: translateY(5px);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.449);
+}
+
+
+select{
+    width: 100%;
+    transition: 0.3s;
+    background-color: white;
+    color: rgb(20, 20, 20);
+    font-size: 1.2em;
+    padding: 4px;
+    border-radius: 5px;
+    border: 2px solid #E7EAED;
+    outline: 0px;
+}
+select:focus,
+select:hover {
+    border-color: var(--cor02);
+    background-color: #fff;
+    box-shadow: 0 0 0 5px rgb(129 140 248 / 30%);
+}
+
+.alterar{
+    background-color: white;
+    color: rgb(20, 20, 20);
+    font-size: 1.2em;
+    padding: 4px;
+    border-radius: 5px;
+    border: 2px solid #E7EAED;
+}
+.alterar a{
+    color: rgb(20, 20, 20);
+
+}
