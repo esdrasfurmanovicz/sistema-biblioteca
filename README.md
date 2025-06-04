@@ -9,8 +9,8 @@ Pré-requisitos: Certifique-se de ter o Docker instalado em sua máquina.
      
 Clonar o repositório:
 ````
-git clone <URL_DO_REPOSITORIO>
-cd SISTEMA-BIBLIOTECA
+git clone [<URL_DO_REPOSITORIO>](https://github.com/esdrasfurmanovicz/sistema-biblioteca.git)
+cd sistema-biblioteca
 ````
 
 Iniciar os containers:
